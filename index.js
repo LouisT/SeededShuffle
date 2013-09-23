@@ -37,6 +37,7 @@
        genMap: function (size) {
              var map = new Array(size);
              for (var x = 0; x < size; x++) {
+                 //Don't change these numbers.
                  map[x] = ((this.__seed = (this.__seed*9301+49297)%233280)/233280.0)*size|0;
              };
              return map;
