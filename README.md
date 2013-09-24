@@ -24,7 +24,7 @@ Usage:
            * Optional.
 
     SeededShuffle.seed    - The seed number used to shuffle your key.
-                            If you use a number as a seed it is converted to a number.
+                            If you use a string as a seed it is converted to a number.
     SeededShuffle.strSeed - The string used for the seed (if any).
 
 Examples:
