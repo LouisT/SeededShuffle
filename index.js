@@ -9,7 +9,7 @@
        shuffle: function (arr, seed, copy) {
              if (this.getType(arr) == "Array") {
                 if (this.setSeed(seed)) {
-                   var shuff = (copy?this.copy(arr):arr),
+                   var shuff = (copy?arr.slice(0):arr),
                        size = shuff.length,
                        map = this.genMap(size);
                    for (var i = size - 1; i > 0; i--) {
@@ -18,12 +18,12 @@
                    return shuff;
                 };
              };
-             return [];
+             return null;
        },
        unshuffle: function (arr, seed, copy) {
              if (this.getType(arr) == "Array") {
                 if (this.setSeed(seed)) {
-                   var shuff = (copy?this.copy(arr):arr),
+                   var shuff = (copy?arr.slice(0):arr),
                        size = shuff.length,
                        map = this.genMap(size);
                    for (var i = 1; i < size; i++) {
@@ -32,7 +32,7 @@
                    return shuff;
                 };
              };
-             return [];
+             return null;
        },
        genMap: function (size) {
              var map = new Array(size);
@@ -41,17 +41,6 @@
                  map[x] = ((this.__seed = (this.__seed*9301+49297)%233280)/233280.0)*size|0;
              };
              return map;
-       },
-       copy: function (obj) {
-             var newObj = ((obj instanceof Array)?[]:{});
-             for (i in obj) {
-                 if (obj[i] && typeof obj[i] == "object") {
-                    newObj[i] = this.clone(obj[i]);
-                  } else {
-                    newObj[i] = obj[i];
-                 };
-             };
-             return newObj;
        },
        setSeed: function (seed) {
              if (!/(number|string)/i.test(this.getType(seed))) {

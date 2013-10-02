@@ -1,4 +1,4 @@
-var ss = require('seededshuffle');
+var ss = require('./');
 var arrays = [
     [1,2,3,4,5,6,7,8,9,10],
     ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"], 
@@ -16,8 +16,8 @@ for (var num in arrays) {
         var shuff = ss.shuffle(arrays[num],keys[key],true),
             ushuff = ss.unshuffle(shuff,keys[key],true);
         console.log("   --- Key "+keys[key]+" ---");
-        console.log("Shuffled: "+(shuff.length>0?shuff:"returned was empty!"));
-        console.log("Unshuffled: "+(ushuff.length>0?ushuff:"returned was empty!"));
+        console.log("Shuffled: "+(shuff?shuff:"returned was empty!"));
+        console.log("Unshuffled: "+(ushuff?ushuff:"returned was empty!"));
         console.log();
     };
 };

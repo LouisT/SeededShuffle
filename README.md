@@ -1,4 +1,4 @@
-SeededShuffle (v0.1.0)
+SeededShuffle (v0.1.1)
 ======
 
 Install: npm install seededshuffle
@@ -15,8 +15,8 @@ Usage:
 ------
     var SeededShuffle = require('seededshuffle');
 
-    var array = SeededShuffle.shuffle(<array>,<seed>[,copy]);
-    var array = SeededShuffle.unshuffle(<array>,<seed>[,copy]);
+    var array = SeededShuffle.shuffle(<array>,<seed>[,copy]); // Returns an array or null.
+    var array = SeededShuffle.unshuffle(<array>,<seed>[,copy]); // Returns an array or null.
 
         Array  - The array to shuffle.
         Seed   - The key to shuffle your array.
@@ -47,8 +47,8 @@ for (var num in arrays) {
         var shuff = ss.shuffle(arrays[num],keys[key],true),
             ushuff = ss.unshuffle(shuff,keys[key],true);
         console.log("   --- Key "+keys[key]+" ---");
-        console.log("Shuffled: "+(shuff.length>0?shuff:"returned was empty!"));
-        console.log("Unshuffled: "+(ushuff.length>0?ushuff:"returned was empty!"));
+        console.log("Shuffled: "+(shuff?shuff:"returned was empty!"));
+        console.log("Unshuffled: "+(ushuff?ushuff:"returned was empty!"));
         console.log();
     };
 };
@@ -77,8 +77,8 @@ for (var num in arrays) {
         var shuff = SeededShuffle.shuffle(arrays[num],keys[key],true),
             ushuff = SeededShuffle.unshuffle(shuff,keys[key],true);
         output("   --- Key: "+keys[key]+" ---<br />");
-        output("Shuffled: "+(shuff.length>0?shuff:"returned was empty!")+"<br />");
-        output("Unshuffled: "+(ushuff.length>0?ushuff:"returned was empty!")+"<br />");
+        output("Shuffled: "+(shuff?shuff:"returned was empty!")+"<br />");
+        output("Unshuffled: "+(ushuff?ushuff:"returned was empty!")+"<br />");
         output("<br />");
     };
 };

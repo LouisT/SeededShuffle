@@ -21,8 +21,8 @@ for (var num in arrays) {
         var shuff = SeededShuffle.shuffle(arrays[num],keys[key],true),
             ushuff = SeededShuffle.unshuffle(shuff,keys[key],true);
         output("   --- Key: "+keys[key]+" ---<br />");
-        output("Shuffled: "+(shuff.length>0?shuff:"returned was empty!")+"<br />");
-        output("Unshuffled: "+(ushuff.length>0?ushuff:"returned was empty!")+"<br />");
+        output("Shuffled: "+(shuff?shuff:"returned was empty!")+"<br />");
+        output("Unshuffled: "+(ushuff?ushuff:"returned was empty!")+"<br />");
         output("<br />");
     };
 };
