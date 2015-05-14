@@ -3,7 +3,17 @@
 SeededShuffle (v0.1.1)
 ======
 
-Install: npm install seededshuffle
+### Install
+
+NPM
+```
+npm install seededshuffle
+```
+
+Bower
+```
+bower install seededshuffle
+```
 
 This project is [Unlicensed](http://unlicense.org/ "Title").
 In other words, I don't care what you do with it.
