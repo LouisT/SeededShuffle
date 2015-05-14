@@ -9,7 +9,6 @@ NPM
 ```
 npm install seededshuffle
 ```
-
 Bower
 ```
 bower install seededshuffle
