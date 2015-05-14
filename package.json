@@ -7,6 +7,9 @@
     "email": "louist@ltdev.im",
     "url": "http://ltdev.im/"
   },
+  "scripts": {
+    "test": "mocha test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/LouisT/SeededShuffle.git"
