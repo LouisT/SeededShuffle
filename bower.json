@@ -1,0 +1,27 @@
+{
+  "name": "seededshuffle",
+  "main": "index.js",
+  "version": "0.1.1",
+  "homepage": "https://github.com/LouisT/SeededShuffle",
+  "authors": [
+    "Louis T."
+  ],
+  "description": "Shuffle and unshuffle an array by seed/key.",
+  "keywords": [
+    "Shuffle",
+    "seed",
+    "unshuffle",
+    "random",
+    "javascript",
+    "array",
+    "seeded"
+  ],
+  "license": "Unlicense",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
