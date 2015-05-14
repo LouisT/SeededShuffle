@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>SeededShuffle test</title>
+<script src="./sshuffle.js"></script>
+<script>
+window.onload = function () {
+var arrays = [
+    [1,2,3,4,5,6,7,8,9,10],
+    ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"], 
+];
+var keys = [
+    "Example key 1.",
+    Date.now(),
+    Math.PI,
+    "Example key 4.",
+    false,
+];
+for (var num in arrays) {
+    output("<br />--- Array: "+arrays[num]+" ---<br />");
+    for (var key in keys) {
+        var shuff = SeededShuffle.shuffle(arrays[num],keys[key],true),
+            ushuff = SeededShuffle.unshuffle(shuff,keys[key],true);
+        output("   --- Key: "+keys[key]+" ---<br />");
+        output("Shuffled: "+(shuff?shuff:"returned was empty!")+"<br />");
+        output("Unshuffled: "+(ushuff?ushuff:"returned was empty!")+"<br />");
+        output("<br />");
+    };
+};
+};
+function output (txt) {
+    document.getElementById("seeded").innerHTML += txt;
+};
+</script>
+</head>
+<body>
+<div id="seeded"></div>
+</body>
+</html>

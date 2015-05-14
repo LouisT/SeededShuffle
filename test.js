@@ -28,12 +28,9 @@ for (var num in arrays) {
     };
 };
 
-describe('shuffle-seed', function() {
+describe('seededshuffle', function() {
 	it('should test', function(done) {
-		console.log(shuffle([1,2,3,4,5],'ball'));
-
-
-		console.log()
+        
 		done();
 	});
 });

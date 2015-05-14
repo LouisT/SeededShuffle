@@ -4,4 +4,5 @@ bower.json
 .editorconfig
 test/
 npm-debug.log
+examples/
 test.js
