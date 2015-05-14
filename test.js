@@ -1,36 +1,57 @@
 'use strict';
-var shuffle = require('./');
 var expect = require('chai').expect;
-
-var ss = require('seededshuffle');
-var arrays = [
-    [1,2,3,4,5,6,7,8,9,10],
-    ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
-];
-var keys = [
-    "Example key 1.",
-    Date.now(),
-    Math.PI,
-    "Example key 4.",
-    false,
-    'bola',
-    3,
-];
-for (var num in arrays) {
-    console.log("\n--- Array "+arrays[num]+" ---");
-    for (var key in keys) {
-        var shuff = ss.shuffle(arrays[num],keys[key],true),
-            ushuff = ss.unshuffle(shuff,keys[key],true);
-        console.log("   --- Key "+keys[key]+" ---");
-        console.log("Shuffled: "+(shuff && shuff.length ? shuff:"returned was empty!"));
-        console.log("Unshuffled: "+(ushuff && ushuff.length ? ushuff:"returned was empty!"));
-        console.log();
-    };
-};
+var ss = require('./');
 
 describe('seededshuffle', function() {
-	it('should test', function(done) {
-        
-		done();
-	});
+  var array = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  it('should shuffle and return a new array same size with a string seed', function(done) {
+    var shuff = ss.shuffle(array,"Example seed",true);
+    expect(shuff).to.deep.not.equal(array);
+    expect(shuff).to.have.length(array.length);
+    done();
+  });
+
+  it('should shuffle and unshuffle returning same array with string seed', function(done) {
+    var seed = "Hello world";
+    var shuff = ss.shuffle(array,seed,true);
+    var ushuff = ss.unshuffle(shuff,seed,true);
+
+    expect(ushuff).to.deep.equal(array);
+    expect(ushuff).to.have.length(array.length);
+    done();
+  });
+
+  it('should shuffle and return a new array same size with a number', function(done) {
+    var shuff = ss.shuffle(array,701,true);
+    expect(shuff).to.deep.not.equal(array);
+    expect(shuff).to.have.length(array.length);
+    done();
+  });
+
+  it('should shuffle and unshuffle returning same array with number seed', function(done) {
+    var seed = 25;
+    var shuff = ss.shuffle(array,seed,true);
+    var ushuff = ss.unshuffle(shuff,seed,true);
+
+    expect(ushuff).to.deep.equal(array);
+    expect(ushuff).to.have.length(array.length);
+    done();
+  });
+
+  it('should shuffle and return a new array same size with a float', function(done) {
+    var shuff = ss.shuffle(array,7.1,true);
+    expect(shuff).to.deep.not.equal(array);
+    expect(shuff).to.have.length(array.length);
+    done();
+  });
+
+  it('should shuffle and unshuffle returning same array with float seed', function(done) {
+    var seed = 2.5;
+    var shuff = ss.shuffle(array,seed,true);
+    var ushuff = ss.unshuffle(shuff,seed,true);
+
+    expect(ushuff).to.deep.equal(array);
+    expect(ushuff).to.have.length(array.length);
+    done();
+  });
 });
