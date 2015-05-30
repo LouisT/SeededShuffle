@@ -1,7 +1,18 @@
+[![Build Status](https://travis-ci.org/LouisT/seededshuffle.svg?branch=master)](https://travis-ci.org/LouisT/seededshuffle) [![npm version](https://badge.fury.io/js/seededshuffle.svg)](http://badge.fury.io/js/seededshuffle) ![Bower version](https://badge.fury.io/bo/seededshuffle.svg) 
+
 SeededShuffle (v0.1.1)
 ======
 
-Install: npm install seededshuffle
+### Install
+
+NPM
+```
+npm install seededshuffle
+```
+Bower
+```
+bower install seededshuffle
+```
 
 This project is [Unlicensed](http://unlicense.org/ "Title").
 In other words, I don't care what you do with it.

@@ -1,29 +1,36 @@
 {
-    "name": "seededshuffle",
-    "version": "0.1.1",
-    "homepage": "https://github.com/LouisT/SeededShuffle",
-    "author": {
-        "name": "Louis T.",
-        "email": "louist@ltdev.im",
-        "url": "http://ltdev.im/"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/LouisT/SeededShuffle.git"
-    },
-    "licenses": [
-        {
-          "type": "unlicensed",
-          "url": "http://unlicense.org/"
-        }
-    ],
-    "keywords": [
-        "seed",
-        "seeded",
-        "shuffle",
-        "unshuffle"
-    ],
-    "description": "Shuffle and unshuffle an array by seed/key.",
-    "engine": "node => 0.6",
-    "main": "index.js"
+  "name": "seededshuffle",
+  "version": "0.1.1",
+  "homepage": "https://github.com/LouisT/SeededShuffle",
+  "author": {
+    "name": "Louis T.",
+    "email": "louist@ltdev.im",
+    "url": "http://ltdev.im/"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LouisT/SeededShuffle.git"
+  },
+  "licenses": [
+    {
+      "type": "unlicensed",
+      "url": "http://unlicense.org/"
+    }
+  ],
+  "keywords": [
+    "seed",
+    "seeded",
+    "shuffle",
+    "unshuffle"
+  ],
+  "description": "Shuffle and unshuffle an array by seed/key.",
+  "engine": "node => 0.6",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5"
+  }
 }
