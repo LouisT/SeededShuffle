@@ -3,7 +3,19 @@
   By Louis T. <louist@ltdev.im>
   https://github.com/LouisT/SeededShuffle/
 */
-(function(Setup){
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define([], function () {
+      return (root.SeededShuffle = factory());
+    });
+  } else if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+  } else {
+    // Browser globals
+    root.SeededShuffle = factory();
+  }
+}(this, function () {
    var proto = {
        strSeed: null,
        shuffle: function (arr, seed, copy) {
@@ -55,7 +67,5 @@
              return Object.prototype.toString.call(obj).match(/^\[object (.*)\]$/)[1];
        },
    };
-   Setup((function(){
-        return Object.create(proto);
-   })());
-})((typeof exports!=='undefined'?function(fn){module.exports=fn;}:function(fn){this['SeededShuffle']=fn;}));
+   return Object.create(proto);
+}));
