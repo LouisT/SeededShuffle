@@ -1,6 +1,6 @@
 {
   "name": "seededshuffle",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/LouisT/SeededShuffle",
   "author": {
     "name": "Louis T.",
@@ -16,15 +16,17 @@
   },
   "licenses": [
     {
-      "type": "unlicensed",
+      "type": "unlicense",
       "url": "http://unlicense.org/"
     }
   ],
   "keywords": [
-    "seed",
-    "seeded",
     "shuffle",
-    "unshuffle"
+    "seed",
+    "unshuffle",
+    "random",
+    "array",
+    "seeded"
   ],
   "description": "Shuffle and unshuffle an array by seed/key.",
   "engine": "node => 0.6",

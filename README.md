@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/LouisT/SeededShuffle.svg?branch=master)](https://travis-ci.org/LouisT/SeededShuffle) [![npm version](https://badge.fury.io/js/seededshuffle.svg)](http://badge.fury.io/js/seededshuffle) ![Bower version](https://badge.fury.io/bo/seededshuffle.svg) 
 
-SeededShuffle (v0.1.1)
+SeededShuffle
 ======
 
 ### Install
