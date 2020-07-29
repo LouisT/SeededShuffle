@@ -32,7 +32,7 @@
   "engine": "node => 0.6",
   "main": "index.js",
   "devDependencies": {
-    "chai": "^2.3.0",
+    "chai": "^4.2.0",
     "mocha": "^2.2.5"
   }
 }
