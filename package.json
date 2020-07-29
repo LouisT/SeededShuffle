@@ -33,6 +33,6 @@
   "main": "index.js",
   "devDependencies": {
     "chai": "^2.3.0",
-    "mocha": "^2.2.5"
+    "mocha": "^8.0.1"
   }
 }
